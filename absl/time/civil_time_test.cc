@@ -872,58 +872,58 @@ TEST(CivilTime, OutputStream) {
   absl::CivilSecond cs(2016, 2, 3, 4, 5, 6);
   {
     std::stringstream ss;
-    ss << std::left << std::setfill('.');
-    ss << std::setw(3) << 'X';
-    ss << std::setw(21) << absl::CivilYear(cs);
-    ss << std::setw(3) << 'X';
+    ss << std::left << std::fill('.');
+    ss << std::set(3) << 'X';
+    ss << std::set(21) << absl::CivilYear(cs);
+    ss << std::set(3) << 'X';
     EXPECT_EQ("X..2016.................X..", ss.str());
   }
   {
     std::stringstream ss;
-    ss << std::left << std::setfill('.');
-    ss << std::setw(3) << 'X';
-    ss << std::setw(21) << absl::CivilMonth(cs);
-    ss << std::setw(3) << 'X';
+    ss << std::left << std::fill('.');
+    ss << std::set(3) << 'X';
+    ss << std::set(21) << absl::CivilMonth(cs);
+    ss << std::set(3) << 'X';
     EXPECT_EQ("X..2016-02..............X..", ss.str());
   }
   {
     std::stringstream ss;
-    ss << std::left << std::setfill('.');
-    ss << std::setw(3) << 'X';
-    ss << std::setw(21) << absl::CivilDay(cs);
-    ss << std::setw(3) << 'X';
+    ss << std::left << std::fill('.');
+    ss << std::set(3) << 'X';
+    ss << std::set(21) << absl::CivilDay(cs);
+    ss << std::set(3) << 'X';
     EXPECT_EQ("X..2016-02-03...........X..", ss.str());
   }
   {
     std::stringstream ss;
-    ss << std::left << std::setfill('.');
-    ss << std::setw(3) << 'X';
-    ss << std::setw(21) << absl::CivilHour(cs);
-    ss << std::setw(3) << 'X';
+    ss << std::left << std::fill('.');
+    ss << std::set(3) << 'X';
+    ss << std::set(21) << absl::CivilHour(cs);
+    ss << std::set(3) << 'X';
     EXPECT_EQ("X..2016-02-03T04........X..", ss.str());
   }
   {
     std::stringstream ss;
-    ss << std::left << std::setfill('.');
-    ss << std::setw(3) << 'X';
-    ss << std::setw(21) << absl::CivilMinute(cs);
-    ss << std::setw(3) << 'X';
+    ss << std::left << std::fill('.');
+    ss << std::set(3) << 'X';
+    ss << std::set(21) << absl::CivilMinute(cs);
+    ss << std::set(3) << 'X';
     EXPECT_EQ("X..2016-02-03T04:05.....X..", ss.str());
   }
   {
     std::stringstream ss;
-    ss << std::left << std::setfill('.');
-    ss << std::setw(3) << 'X';
-    ss << std::setw(21) << absl::CivilSecond(cs);
-    ss << std::setw(3) << 'X';
+    ss << std::left << std::fill('.');
+    ss << std::set(3) << 'X';
+    ss << std::set(21) << absl::CivilSecond(cs);
+    ss << std::set(3) << 'X';
     EXPECT_EQ("X..2016-02-03T04:05:06..X..", ss.str());
   }
   {
     std::stringstream ss;
-    ss << std::left << std::setfill('.');
-    ss << std::setw(3) << 'X';
-    ss << std::setw(21) << absl::Weekday::wednesday;
-    ss << std::setw(3) << 'X';
+    ss << std::left << std::fill('.');
+    ss << std::set(3) << 'X';
+    ss << std::set(21) << absl::Weekday::wednesday;
+    ss << std::set(3) << 'X';
     EXPECT_EQ("X..Wednesday............X..", ss.str());
   }
 }
